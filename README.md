@@ -41,7 +41,7 @@ $\Rightarrow y(k) = -a_1y(k-1) - a_2y(k-2) - ... - a_py(k-p)$
 
 ```commandline
 %cd ~
-import PaddleAutoregressive.PaddleAutoregressive.AR as AR
+import PaddleAutoregressive.AR as AR
 import paddle
 model = AR.AR(5)
 paddle.summary(model,(5,5))
