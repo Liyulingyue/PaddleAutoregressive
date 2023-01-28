@@ -15,11 +15,11 @@ class Autoregressive(paddle.nn.Layer):
 
         linear_list = []
         if y_features != 0:
-            linear_list.append(paddle.nn.Linear(y_features, 1))
+            linear_list.append(paddle.nn.Linear(y_features, 1, bias_attr=True))
         for _x in x_features:
-            linear_list.append(paddle.nn.Linear(_x, 1))
+            linear_list.append(paddle.nn.Linear(_x, 1, bias_attr=True))
         if e_features != 0:
-            linear_list.append(paddle.nn.Linear(e_features, 1))
+            linear_list.append(paddle.nn.Linear(e_features, 1, bias_attr=True))
         self.linear_list = paddle.nn.Sequential(*linear_list)
 
     def forward(self, *inputs):

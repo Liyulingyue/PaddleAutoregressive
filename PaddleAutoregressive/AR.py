@@ -1,4 +1,4 @@
-from Autoregressive import Autoregressive
+from PaddleAutoregressive.PaddleAutoregressive.Autoregressive import Autoregressive
 import paddle
 
 class AR(paddle.nn.Layer):
